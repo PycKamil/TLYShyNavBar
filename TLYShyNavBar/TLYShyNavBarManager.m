@@ -261,7 +261,7 @@
             __weak typeof(self) weakSelf = self;
 
             void(^tapGestureBlock)(void) = ^{
-                [weakSelf.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x, -self.scrollView.contentInset.top) animated:YES];
+                [weakSelf.scrollView setContentOffset:CGPointMake(weakSelf.scrollView.contentOffset.x, -weakSelf.scrollView.contentInset.top) animated:YES];
             };
 
             [self.navBarController showAndConfigureTitleLabelWithText:self.extensionView.extensionViewTitle
